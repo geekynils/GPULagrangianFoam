@@ -1,0 +1,90 @@
+Performance test torus.
+
+Mesh stats
+    points:           44633
+    faces:            468920
+    internal faces:   443816
+    cells:            228184
+    boundary patches: 1
+    point zones:      0
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     0
+    prisms:        0
+    wedges:        0
+    pyramids:      0
+    tet wedges:    0
+    tetrahedra:    228184
+    polyhedra:     0
+
+
+
+10K particles
+
+Double Precision
+
+CPU testDataFoam
+
+trackToFace() took 645502 usec or ~ 0.645502 sec.
+
+GPU calcLambdas
+
+Allocated 50091072 bytes (~ 47.770569 MB) on device for particle data.
+Allocated 132155628 bytes (~ 126.033428 MB) on device for particle data.
+The whole calculation took 173425 usec or ~ 0.173425 sec.
+
+
+Single Precision
+
+testDataFoam
+
+trackToFace() took 559192 usec or ~ 0.559192 sec.
+
+Allocated 27783744 bytes (~ 26.496643 MB) on device for particle data.
+Allocated 83805488 bytes (~ 79.923141 MB) on device for particle data.
+The whole calculation took 149949 usec or ~ 0.149949 sec.
+
+calcLambda
+Allocated 27783744 bytes (~ 26.496643 MB) on device for mesh data.
+Allocated 83805488 bytes (~ 79.923141 MB) on device for particle data.
+The whole calculation took 103017 usec or ~ 0.103017 sec.
+
+
+Double precision after moving reduce from the CPU to the GPU.
+
+Allocated 50091072 bytes (~ 47.770569 MB) on device for mesh data.
+Allocated 132155628 bytes (~ 126.033428 MB) on device for particle data.
+The whole calculation took 133586 usec or ~ 0.133586 sec.
+
+
+
+Larger case 50k particles
+--------------------------
+
+DP
+---
+
+testDataFoam
+
+ExecutionTime = 7.03 s  ClockTime = 7 s
+
+trackToFace() took 3'264'259 usec or ~ 3.264259 sec.
+
+calcLambdas
+
+Allocated 50091072 bytes (~ 47.770569 MB) on device for mesh data.
+Allocated 660883756 bytes (~ 630.267864 MB) on device for particle data.
+The whole calculation took 376349 usec or ~ 0.376349 sec.
+
+SP
+--
+
+testDataFoam
+trackToFace() took 2810792 usec or ~ 2.810792 sec.
+
+Allocated 27783744 bytes (~ 26.496643 MB) on device for mesh data.
+Allocated 419091712 bytes (~ 399.677002 MB) on device for particle data.
+The whole calculation took 220866 usec or ~ 0.220866 sec.
+

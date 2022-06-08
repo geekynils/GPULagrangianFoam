@@ -1,0 +1,5 @@
+Starting cuda-memcheck...
+Invalid write of size 4
+    at 0x00000130 in _Z20memsetIntegralKernelPiii (../deviceManagement.cu:91)
+    by thread (0,0,0) in block (0,0,0)
+Global address 00000000 is out of bounds

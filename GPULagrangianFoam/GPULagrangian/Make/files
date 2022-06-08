@@ -1,0 +1,6 @@
+gpuParticle.C
+gpuParticleIO.C
+gpuParticleCloud.C
+gpuParticleCloudHelper.C
+
+LIB = $(FOAM_USER_LIBBIN)/libgpulagrangian
